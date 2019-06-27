@@ -1,0 +1,9 @@
+.box-course {
+    display: flex;
+    flex-direction: row;
+
+    .container-text {
+        display: flex;
+        flex-direction: column;
+    }
+}
