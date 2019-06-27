@@ -2,6 +2,8 @@ import React from 'react';
 import './style.scss';
 import Paginator from '../../molecules/paginator/paginator';
 import BoxCourse from '../../molecules/box-course/box-course';
+import BoxCourseTwo from '../../molecules/box-course-two/box-course-two';
+
 
 const Body = ({ data, totalPage, page, items }) => {
   return (
