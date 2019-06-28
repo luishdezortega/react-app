@@ -1,13 +1,15 @@
 import React from 'react';
 import './style.scss';
 
-function RadioButton({checked, name}) {
+function RadioButton({ text, name }) {
   return (
     <div className="radio-button" >
-     <label>
-            <input type="radio" name={name} value="option1" checked={checked} />
-            Option 1
-          </label>
+      <label>
+        <input type="radio" name={name} />
+        <div>
+          {text}
+        </div>
+      </label>
     </div>
   );
 }

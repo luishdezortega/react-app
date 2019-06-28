@@ -5,7 +5,7 @@ const Header = ({ handleChange } ) => {
 
     const change = ( value ) => {
         if(value.length > 2) {
-            console.log(value);
+            // console.log(value);
             handleChange(value);
         }
     }

@@ -11,10 +11,10 @@ function Paginator({ page, total, previus, next }) {
         <div>
           <span>Page {page}</span> of <span>{total}</span> result
         </div>
-        <div>
+        {/* <div>
           <span>Sorter by</span>
           <div>Relevance</div>
-        </div>
+        </div> */}
       </div>
       <div className="paginator">
         {page > 1 ? <ArrowLeft handleClick={previus} /> : null} 

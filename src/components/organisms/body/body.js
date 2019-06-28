@@ -9,18 +9,26 @@ import BoxRadioButton from '../../molecules/radio-button-box/box-button';
 
 const Body = ({ data, totalPage, page, items, previus, next }) => {
   return (
-    <section className="body-section">
-      <div className="radio-buttons-options">
-        <BoxRadioButton />
-      </div>
+    <section className="">
 
-      <div className="courses-list">
-        <Paginator previus={previus} next={next}  total={totalPage} page={page} />
-        <div>
-          {loopCourse(data)}
+
+
+      <div className="body-section">
+
+
+        <div className="radio-buttons-options">
+          <p className="textaling">FILTER COURSE RESULTS</p>
+          <BoxRadioButton />
         </div>
-        <div>
-          {loopCourseAll(items)}
+
+        <div className="courses-list">
+          <Paginator previus={previus} next={next} total={totalPage} page={page} />
+          <div>
+            {loopCourse(data)}
+          </div>
+          <div>
+            {loopCourseAll(items)}
+          </div>
         </div>
       </div>
     </section>
