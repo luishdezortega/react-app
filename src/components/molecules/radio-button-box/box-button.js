@@ -3,7 +3,7 @@ import './style.scss';
 import RadioButton from "../../atoms/radio-button/radio-button";
 
 
-const BoxRadioButton = ({ item }) => {
+const BoxRadioButton = () => {
   let name = "check";
 
   return (
@@ -30,5 +30,4 @@ const BoxRadioButton = ({ item }) => {
     </div>
   );
 }
-
 export default BoxRadioButton;

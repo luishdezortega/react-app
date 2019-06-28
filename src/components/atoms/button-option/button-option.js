@@ -1,13 +1,11 @@
 import React from 'react';
 import './style.scss';
-import arrow from './../../../assets/imgs/arrow.png';
 
-function ButtonOption() {
+
+function ButtonOption({texto}) {
   return (
     <div className="button-option" >
-      <figure>
-        <img src={arrow} alt="arrow-right"/>
-      </figure>
+      <p>{texto}</p>
     </div>
   );
 }

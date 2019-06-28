@@ -5,10 +5,17 @@ import Logo from "../../atoms/logo/logo";
 
 
 
-const  NavbarBox = ({ item }) => {
+const NavbarBox = () => {
   return (
-    <div className=""  >     
-      <Logo/>
+    <div className="navbar-items">
+      <Logo />
+      <div className="navbar-options">
+        <ButtonNavbar texto="Features" />
+        <ButtonNavbar texto="Plans" />
+        <ButtonNavbar texto="Organizations" />
+        <ButtonNavbar texto="Browse courses" />
+        <ButtonNavbar texto="Support" />
+      </div>
     </div>
   );
 }

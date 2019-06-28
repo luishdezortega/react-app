@@ -1,0 +1,9 @@
+.navbar-items{
+    display: flex;
+
+    .navbar-options{
+        width: 650px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
