@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import Search from './../../atoms/search/search';
 
 const Header = ({ handleChange } ) => {
 
@@ -12,6 +13,7 @@ const Header = ({ handleChange } ) => {
 
     return (
         <div className="header"  >
+        <Search/>
         <input type="text" onChange={(event)=>change(event.target.value)} />
         </div>
     );
