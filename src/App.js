@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.scss';
 import Header from "./components/organisms/header/header";
 import Body  from "./components/organisms/body/body";
+import Navbar  from "./components/organisms/navbar/navbar";
+
 import { getCourses, getCoursesAll } from "../src/services/http";
 
 class App extends Component {
@@ -53,6 +55,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar/>
         <Header handleChange={this.handleChange.bind(this)} />
         <Body
           page={this.state.pageIndex}
