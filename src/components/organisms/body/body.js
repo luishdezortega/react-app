@@ -1,21 +1,37 @@
 import React from 'react';
 import './style.scss';
 import Paginator from '../../molecules/paginator/paginator';
-import BoxCourse from '../../molecules/box-course/box-course';
-import BoxCourseTwo from '../../molecules/box-course-two/box-course-two';
+import BoxCourse from '../../molecules/course-relevant-box/course-relevant';
+import BoxCourseTwo from '../../molecules/course-all-box/course-all';
+import BoxRadioButton from '../../molecules/radio-button-box/box-button';
+
 
 
 const Body = ({ data, totalPage, page, items }) => {
   return (
-    <div className="body"  >
-      <Paginator total={totalPage} page={page} />
-      <div>
-        {loopCourse(data)}
+    <section className="body-section">
+      <div className="radio-buttons-options">
+        <BoxRadioButton />
       </div>
-    </div>
+
+      <div className="courses-list">
+        <Paginator total={totalPage} page={page} />
+        <div>
+          {loopCourse(data)}
+        </div>
+        <div>
+          {loopCourseAll(items)}
+        </div>
+      </div>
+    </section>
+
+
+
+
   );
 }
 
-const loopCourse = (data) => data.map( (item, key) => <BoxCourse key={key} item={item} /> )
+const loopCourse = (data) => data.map((item, key) => <BoxCourse key={key} item={item} />);
+const loopCourseAll = (items) => items.map((item, key) => <BoxCourseTwo key={key} item={item} />);
 
 export default Body;
