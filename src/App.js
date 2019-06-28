@@ -12,11 +12,13 @@ class App extends Component {
       data : [],
       dataPage : [],
       pageIndex : 1,
-      totalPage : 0
+      totalPage : 0,
+      search : undefined
     }
   }
 
   handleChange( value ) {
+    this.setState({search : value})
     this.initData( value );
   }
 
@@ -25,10 +27,21 @@ class App extends Component {
       this.state.pageIndex,
       search ? search : undefined
     );
+    const totalItems = response.data.totalItems/18;
     this.setState({
-       totalPage : response.data.totalItems,
+       totalPage : response.data.totalItems%18 > 0 ? parseInt(totalItems)+1 : totalItems,
        dataPage : response.data.items
     });
+  }
+
+  next(){
+    this.setState({pageIndex : this.state.pageIndex+1 });
+    this.initData(this.state.search);
+  }
+
+  previus(){
+    this.setState({pageIndex : this.state.pageIndex-1 });
+    this.initData(this.state.search);
   }
 
   async componentDidMount(){
@@ -46,6 +59,8 @@ class App extends Component {
           items={this.state.dataPage}
           totalPage={this.state.totalPage}
           data={this.state.data} 
+          next={this.next.bind(this)}
+          previus={this.previus.bind(this)}
         />
       </div>
     );

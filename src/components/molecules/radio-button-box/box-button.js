@@ -8,8 +8,7 @@ const BoxRadioButton = ({ item }) => {
   let id = "buttonOne";
 
   return (
-    <div className="button-container"  >
-      
+    <div className="button-container">      
       <RadioButton name={name} />
       <RadioButton name={name}/>
       <RadioButton name={name} />
